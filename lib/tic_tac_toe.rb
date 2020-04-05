@@ -111,18 +111,13 @@ def winner(board)
 end
 
 def play(board)
-  while over?(board) != TRUE
-    turn(board)
+  until over?(board) == false
+    turn(board) # take another turn
   end
-
-  display_board(board)
-
-  if (won?(board) != FALSE)
+  if won?(board) # calls on won? and returns who won
     puts "Congratulations #{winner(board)}!"
-
-  else
+  elsif draw?(board) 
     puts "Cat's Game!"
   end
-
 end
 
