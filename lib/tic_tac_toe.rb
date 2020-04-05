@@ -110,27 +110,15 @@ def winner(board)
   end
 end
 
-# def play(board)
-#   until over?(board)
-#     turn(board) # take another turn
-#   end
-#   if won?(board) # calls on won? and returns who won
-#     puts "Congratulations #{winner(board)}!"
-#   elsif
-#     draw?(board)
-#     puts "Cat's Game!"
-#   end
-# end
-
 def play(board)
-  while !(over?(board))
-    turn(board)
+  until over?(board)
+    turn(board) # take another turn
   end
-  if won?(board)
-    token = winner(board)
-    puts "Congratulations #{token}!"
-  elsif draw?(board)
+  if won?(board) # calls on won? and returns who won
+    puts "Congratulations #{winner(board)}!"
+  elsif
+    draw?(board)
     puts "Cat's Game!"
-  else
   end
-end 
+end
+
