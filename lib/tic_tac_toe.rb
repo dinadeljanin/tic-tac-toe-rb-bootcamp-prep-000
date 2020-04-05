@@ -113,11 +113,11 @@ end
 def play(board)
   until over?(board)
     turn(board) # take another turn
-    if won?(board) # calls on won? and returns who won
+  end
+  if won?(board) # calls on won? and returns who won
     puts "Congratulations #{winner(board)}!"
   elsif draw?(board) 
     puts "Cat's Game!"
-  end
   end
 end
 
