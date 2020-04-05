@@ -111,7 +111,7 @@ def winner(board)
 end
 
 def play(board)
-  until !(over?(board))
+  until over?(board)
     turn(board) # take another turn
   end
   if won?(board) # calls on won? and returns who won
