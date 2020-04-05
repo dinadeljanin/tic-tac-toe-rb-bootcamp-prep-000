@@ -116,7 +116,7 @@ def play(board)
   end
   if won?(board) # calls on won? and returns who won
     puts "Congratulations #{winner(board)}!"
-  else # cause that's determined in over?
+  else # cause that's determined in over? note to self in the future: that was not a question
     puts "Cat's Game!"
   end
 end
